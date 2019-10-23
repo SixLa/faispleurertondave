@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fais pleurer ton Dave</title>
+  <link rel="stylesheet" href="./css/styles.dave.css">
+
+
+</head>
+
+<body>
+
+<!-- -------- ESPACE VISUEL A GAUCHE AVEC ANIMATIONS -------- -->
+
+	<div id="AllDaveOptions">
+
+		<div id="DaveCompteurs">
+			<div id="Dave">
+					<!-- <div id="larme"></div> >> Test pour naimation larme -->
+					<img id="clicker" src="images/hublot1.png">
+			</div>
+
+			<div id="Compteurs">
+				<p id="CompteurLarmes">Compteur de larmes : 0</p>
+				<p id="LarmesSeconde">Larmes par seconde : 0</p>
+				<p id="MultiNbLarmesClic">Multiplicateur du nombre de larmes / clic : x 1</p>
+				<p id="TotalLarmes">Total des larmes accumulées : 0</p>
+			</div>
+		</div>
+		
+<!-- -------- OPTIONS A UPGRADER EN HAUT A DROITE -------- -->
+
+		<div id="AllOptions">
+
+			<div id="AllOptionUp">
+
+				<h1>Les options à upgrader</h1>
+
+				<table>
+					<tr>
+						<td><img src="./images/OptionUp1.png"></td>
+						<td><img src="./images/OptionUp1.png"></td>
+						<td><img src="./images/OptionUp1.png"></td>
+						<td><img src="./images/OptionUp1.png"></td>
+					</tr>
+					<tr id="Niveaux">
+						<td><button id="OptionUp1">Niveau 1 <Br>Prix : 20</button></td>
+						<td><button id="OptionUp2" type="button" disabled="true">Niveau 1 / Coût prochain achat : 50</button></td>
+						<td><button id="OptionUp3" type="button" disabled="true">Niveau 1 / Coût prochain achat : 100</button></td>
+						<td><button id="OptionUp4" type="button" disabled="true">Niveau 1 / Coût prochain achat : 500</button></td>
+					</tr>
+					<tr>
+						<td><img src="./images/OptionUp1.png"></td>
+						<td><img src="./images/OptionUp1.png"></td>
+						<td><img src="./images/OptionUp1.png"></td>
+						<td><img src="./images/OptionUp1.png"></td>
+					</tr>
+					<tr id="Niveaux">
+						<td><button id="OptionUp5" type="button" disabled="true">Niveau 1 / Coût prochain achat : 1 000</button></td>
+						<td><button id="OptionUp6" type="button" disabled="true">Niveau 1 / Coût prochain achat : 5 000</button></td>
+						<td><button id="OptionUp7" type="button" disabled="true">Niveau 1 / Coût prochain achat : 25 000</button></td>
+						<td><button id="OptionUp8" type="button" disabled="true">Niveau 1 / Coût prochain achat : 50 000</button></td>
+					</tr>
+				</table>
+			</div>
+
+
+<!-- -------- OPTIONS PONCTUELLES EN BAS A DROITE -------- -->
+
+			<div id="AllOptionPonc">
+				
+				<h1>Les options ponctuelles</h1>
+
+				<div id="OptionPonc1"></div>
+
+				<div id="OptionPonc2"></div>
+
+				<div id="OptionPonc3"></div>
+
+				<div id="OptionPonc4"></div>
+
+			</div>	
+
+		</div>
+	</div>
+
+
+<script src="./js/dave.js"></script>
+<script type="text/javascript" src="./js/larme.js"></script>
+
+</body>
+
+<!-- -------------------- FOOTER -------------------- -->
+
+<footer>
+	
+</footer>
+
+</html>

@@ -1,0 +1,151 @@
+body {
+	margin: 0;
+}
+
+/* Tout sauf footer */
+#AllDaveOptions {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+
+/* -------- ESPACE VISUEL A GAUCHE AVEC ANIMATIONS -------- */
+
+/* Tous les blocs partie gauche */
+#DaveCompteurs {
+	width: 40vw;
+	height: 90vh;
+}
+
+/* Image Dave */
+#Dave {
+	width: 40vw;
+	height: 82vh;
+	background-image: url(../images/DaveV02.png);
+	background-size: cover;
+	background-position: center;
+	border: solid 4px black;
+}
+
+/* Test pour animation Larme 
+#larme {
+	content: url(../images/larme.png);
+	position: relative;
+	left: 0px;
+}
+*/
+
+/* Bouton à cliquer */
+#clicker {
+	z-index: 1;
+	width: 100px;
+	position: absolute;
+	bottom: 35vh;
+	left: 16vw;
+}
+
+#clicker:active {
+	content: url(../images/hublot2.png);
+}
+
+/* Compteurs */
+#Compteurs {
+	background-color: orange;
+	border-bottom: solid 4px black;
+	border-right: solid 4px black;
+	border-left: solid 4px black;
+	width: 40vw;
+	height: 8vh;
+}
+
+#Compteurs p {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-family: 'Arial';
+	margin: 0;
+}
+
+
+/* -------- OPTIONS A UPGRADER EN HAUT A DROITE -------- */
+
+h1 {
+	font-family: 'Arial';
+	font-size: 25px;
+	margin-top: 0;
+}
+
+/* Bloc AllOptionUP & AllOptionsPonc */
+#AllOptions {
+	width: 60vw;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+/* Bloc de toutes les options à upgrader */
+#AllOptionUp {
+	height: 60%;
+	border: solid 1px red;
+}
+
+/* Tableau OptionUp */
+
+table tr {
+	width: 60%;
+}
+
+table img {
+	width: 100%;
+}
+
+table td {
+	font-family: 'Arial';
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+/* Boutons des OptionUp */
+
+#Niveaux td button {
+	background-color: #31B6C7;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+#Niveaux td button:active {
+	background-color: orange;
+}
+
+#Niveaux td button:disabled {
+	background-color: grey;
+	color: black;
+}
+
+
+/* -------- OPTIONS PONCTUELLES EN BAS A DROITE -------- */
+
+/* Bloc de toutes les options ponctuelles */
+#AllOptionPonc {
+	height: 40%;
+	border: solid 1px green;
+}
+
+
+/* -------------------- CARTES MYSTERE -------------------- */
+
+
+
+
+/* --------------------- FOOTER --------------------- */
+
+footer {
+	width: 100vw;
+	height: 10vh;
+	border:solid 1px green;
+}
