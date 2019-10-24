@@ -1,5 +1,11 @@
+@font-face {
+	font-family: "CreamPeach";
+	src: url(../police/cream-peach.ttf);
+}
+
 body {
 	margin: 0;
+	font-family: 'CreamPeach';
 }
 
 /* Tout sauf footer */
@@ -14,26 +20,17 @@ body {
 /* Tous les blocs partie gauche */
 #DaveCompteurs {
 	width: 40vw;
-	height: 90vh;
+	height: 94vh;
 }
 
 /* Image Dave */
 #Dave {
 	width: 40vw;
-	height: 82vh;
-	background-image: url(../images/DaveV02.png);
+	height: 86vh;
+	background-image: url(../images/DaveV03.png);
 	background-size: cover;
 	background-position: center;
-	border: solid 4px black;
 }
-
-/* Test pour animation Larme 
-#larme {
-	content: url(../images/larme.png);
-	position: relative;
-	left: 0px;
-}
-*/
 
 /* Bouton à cliquer */
 #clicker {
@@ -41,7 +38,7 @@ body {
 	width: 100px;
 	position: absolute;
 	bottom: 35vh;
-	left: 16vw;
+	left: 17.5vw;
 }
 
 #clicker:active {
@@ -51,75 +48,97 @@ body {
 /* Compteurs */
 #Compteurs {
 	background-color: orange;
-	border-bottom: solid 4px black;
-	border-right: solid 4px black;
-	border-left: solid 4px black;
+	background-image: url(../images/larme.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
 	width: 40vw;
 	height: 8vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 }
 
 #Compteurs p {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	font-family: 'Arial';
 	margin: 0;
+	font-size: 20px;
 }
 
 
 /* -------- OPTIONS A UPGRADER EN HAUT A DROITE -------- */
 
 h1 {
-	font-family: 'Arial';
-	font-size: 25px;
-	margin-top: 0;
+	font-size: 35px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: white;
 }
 
 /* Bloc AllOptionUP & AllOptionsPonc */
 #AllOptions {
 	width: 60vw;
-	height: 90vh;
+	height: 94vh;
 	display: flex;
 	flex-direction: column;
-	margin-left: 10px;
+	padding-left: 10px;
+	background-image: url(../images/back.jpg);
+
 }
 
 /* Bloc de toutes les options à upgrader */
 #AllOptionUp {
-	height: 60%;
-	border: solid 1px red;
+	height: 60vh;
 }
 
 /* Tableau OptionUp */
 
-table tr {
-	width: 60%;
+#TableOptionUp, #TableOptionsPonc {
+	border-collapse:collapse;
+	width: 98%;
 }
 
-table img {
+#visuelUp {
 	width: 100%;
 }
 
-table td {
-	font-family: 'Arial';
-	font-weight: bold;
-	font-size: 16px;
+tbody td {
 	text-align: center;
-	margin: 0;
 	padding: 0;
+	width: 10%;
+}
+
+#ligneVide {
+ height : 10px;
+}
+
+/* Images des OptionUp */
+#Visuels {
+	height: 50px;
+	width: 50px;
 }
 
 /* Boutons des OptionUp */
 
-#Niveaux td button {
-	background-color: #31B6C7;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-weight: bold;
+#Niveaux {
+	height: 20px;
+	margin-bottom: 10px;
 }
 
-#Niveaux td button:active {
-	background-color: orange;
+#Niveaux td button {
+	background-color: #18EDB5;
+	background-image: url(../images/larme.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: "CreamPeach";
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 #Niveaux td button:disabled {
@@ -127,13 +146,51 @@ table td {
 	color: black;
 }
 
+#Niveaux td button p {
+	margin: 0;
+}
+
+#niveauUp1, #niveauUp2, #niveauUp3, #niveauUp4, #niveauUp5, #niveauUp6, #niveauUp7, #niveauUp8 {
+	font-size: 30px;
+	background-color: #D3D3D3;
+}
+
+#OptionUp1, #OptionUp2, #OptionUp3, #OptionUp4, #OptionUp5, #OptionUp6, #OptionUp7, #OptionUp8 {
+	padding-left: 30px;
+}
 
 /* -------- OPTIONS PONCTUELLES EN BAS A DROITE -------- */
 
 /* Bloc de toutes les options ponctuelles */
 #AllOptionPonc {
 	height: 40%;
-	border: solid 1px green;
+}
+
+
+/* Boutons des OptionPonc */
+
+#NiveauxPonc {
+	height: 5vh;
+	width: 15vh;
+}
+
+#NiveauxPonc td button {
+	background-color: #31B6C7;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	height: 100%;
+	font-family: "CreamPeach";
+	font-size: 16px;
+}
+
+#NiveauxPonc td button:active {
+	background-color: orange;
+}
+
+#NiveauxPonc td button:disabled {
+	background-color: grey;
+	color: black;
 }
 
 
@@ -146,6 +203,15 @@ table td {
 
 footer {
 	width: 100vw;
-	height: 10vh;
-	border:solid 1px green;
+	height: 6vh;
+	background-color: black;
+	color: white;
+	font-family: 'Arial';
+	font-size: 12px;
+}
+
+footer p {
+	margin: 0;
+	padding-left: 20px;
+	padding-top: 20px;
 }
