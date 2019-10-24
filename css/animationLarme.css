@@ -1,0 +1,17 @@
+/*===== ANIMATION LARME CSS =====*/
+
+.blabla {
+	position: absolute;
+	animation-name: slidein;
+	animation-duration: 1s;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 0%;
+     
+  }
+
+  to{
+  	margin-top: 5%;
+  }
