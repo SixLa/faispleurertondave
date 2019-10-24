@@ -2,23 +2,23 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8">
-  <title>Fais pleurer ton Dave</title>
-  <link rel="stylesheet" href="./css/styles.dave.css">
+	<meta charset="utf-8">
+	<title>Fais pleurer ton Dave</title>
+	<link rel="stylesheet" href="./css/styles.dave.css">
 
 
 </head>
 
 <body>
 
-<!-- -------- ESPACE VISUEL A GAUCHE AVEC ANIMATIONS -------- -->
+	<!-- -------- ESPACE VISUEL A GAUCHE AVEC ANIMATIONS -------- -->
 
 	<div id="AllDaveOptions">
 
 		<div id="DaveCompteurs">
 			<div id="Dave" onclick="LancmtEvent()">
-					<!-- <div id="larme"></div> >> Test pour animation larme -->
-					<img id="clicker" src="images/hublot1.png">
+				<!-- <div id="larme"></div> >> Test pour animation larme -->
+				<img id="clicker" src="images/hublot1.png">
 			</div>
 
 			<div id="Compteurs">
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		
-<!-- -------- OPTIONS A UPGRADER EN HAUT A DROITE -------- -->
+		<!-- -------- OPTIONS A UPGRADER EN HAUT A DROITE -------- -->
 
 		<div id="AllOptions">
 
@@ -66,7 +66,7 @@
 			</div>
 
 
-<!-- -------- OPTIONS PONCTUELLES EN BAS A DROITE -------- -->
+			<!-- -------- OPTIONS PONCTUELLES EN BAS A DROITE -------- -->
 
 			<div id="AllOptionPonc">
 				
@@ -85,10 +85,61 @@
 		</div>
 	</div>
 
+	<!-- Les modales pour les events -->
 
-<script src="./js/dave.js"></script>
-<script type="text/javascript" src="./js/larme.js"></script>
-<script type="text/javascript" src="./js/CartesMyst.js"></script>
+	<!-- Modal Carte Mystère 1 -->
+	<div id="ModalCarteMyst1" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>CarteMyst1 | Hello Kitty | Dave est obnubilé devant une vidéo de chatons troooooop mignons, vous perdez 25% de vos larmes car la chaleur apparue dans son coeur à leur vue les assèche.</p>
+		</div>
+	</div>
+
+	<!-- Modal Carte Mystère 2 -->
+	<div id="ModalCarteMyst2" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>CarteMyst2 | Github < Pornhub | Visiblement, Dave a trouvé comment se remonter le moral... Vous perdez 50% de vos larmes actuelles grâce à son stock de mouchoirs. </p>
+		</div>
+	</div>
+
+	<!-- Modal Carte Mystère 3 -->
+	<div id="ModalCarteMyst3" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>CarteMyst3 | Légalisez les cookies (de Mamie) | Dave a reçu un colis avec les délicieux cookies cuisinés par sa Mamie. Ils sont tellement bons qu'il ne fait que rigoler, vous faisant perdre 75% de vos larmes actuelles.</p>
+		</div>
+	</div>
+
+	<!-- Modal Carte Mystère 4 -->
+	<div id="ModalCarteMyst4" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>CarteMyst4 | Chouette, une mise à jour ! | L'ordinateur de Dave a une mise à jour à faire. UNE TRES GROSSE MISE A JOUR. Qui vous engendre 25% de larmes supplémentaires...</p>
+		</div>
+	</div>
+
+	<!-- Modal Carte Mystère 5 -->
+	<div id="ModalCarteMyst5" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>CarteMyst5 | Happy Birthday Mr Dave ! | C'est l'anniversaire de Dave ! Quel dommage qu'il soit seul avec sa bouteille de champagne. </p>
+		</div>
+	</div>
+
+	<!-- Modal Carte Mystère 6 -->
+	<div id="ModalCarteMyst6" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>CarteMyst6 | Hot Stuff | Larmes + prise de courant = incendie. OUPS.</p>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+
+	<script src="./js/dave.js"></script>
+	<script type="text/javascript" src="./js/larme.js"></script>
+	<script type="text/javascript" src="./js/CartesMyst.js"></script>
 
 </body>
 
