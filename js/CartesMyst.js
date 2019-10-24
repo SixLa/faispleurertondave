@@ -13,7 +13,6 @@ var VModalCarteMyst6 = document.getElementById("ModalCarteMyst6");
 
 // Modale 1
 
-var VBtn1 = document.getElementById("Btn1");
 var span = document.getElementsByClassName("close")[0];
 
 function Modal1(){
@@ -125,7 +124,7 @@ function EventRandom() {
 		// CarteMyst1 : 25% des larmes actuelles en moins.
 
 		function CarteMyst1() {
-			VCompteurLarmes = (VCompteurLarmes)-(VCompteurLarmes)/4;
+			VCompteurLarmes = (VCompteurLarmes)-(VCompteurLarmes/4);
 			Modal1();
 		}
 
@@ -133,28 +132,28 @@ function EventRandom() {
 		// CarteMyst2 : 50% des larmes actuelles en moins.
 
 		function CarteMyst2() {
-			VCompteurLarmes = (VCompteurLarmes)-(VCompteurLarmes)/2;
+			VCompteurLarmes = (VCompteurLarmes)-(VCompteurLarmes/2);
 			Modal2();
 		}
 
 		// CarteMyst3 : 75% des larmes actuelles en moins.
 
 		function CarteMyst3() {
-			VCompteurLarmes = (VCompteurLarmes)-((VCompteurLarmes)/4)*3;
+			VCompteurLarmes = (VCompteurLarmes)-((VCompteurLarmes/4)*3);
 			Modal3();
 		}
 
 		// CarteMyst4 : 25% des larmes actuelles en plus.
 
 		function CarteMyst4() {
-			VCompteurLarmes = (VCompteurLarmes)+(VCompteurLarmes)/4;
+			VCompteurLarmes = (VCompteurLarmes)+(VCompteurLarmes/4);
 			Modal4();
 		}
 
 		// CarteMyst5 : 50% des larmes actuelles en plus.
 
 		function CarteMyst5() {
-			VCompteurLarmes = (VCompteurLarmes)+(VCompteurLarmes)/2;
+			VCompteurLarmes = (VCompteurLarmes)+(VCompteurLarmes/2);
 			Modal5();
 
 		}
@@ -162,7 +161,7 @@ function EventRandom() {
 		// CarteMyst6 : 75% des larmes actuelles en plus.
 
 		function CarteMyst6() {
-			VCompteurLarmes = (VCompteurLarmes)+((VCompteurLarmes)/4)*3;
+			VCompteurLarmes = (VCompteurLarmes)+((VCompteurLarmes/4)*3);
 			Modal6();
 		}
 
