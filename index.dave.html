@@ -2,90 +2,108 @@
 <html lang="fr">
 
 <head>
-	<meta charset="utf-8">
-	<title>Fais pleurer ton Dave</title>
-	<link rel="stylesheet" href="./css/styles.dave.css">
+  <meta charset="utf-8">
+  <title>Fais pleurer ton Dave</title>
+  <link rel="stylesheet" href="./css/styles.dave.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
 
 
 </head>
 
 <body>
 
-	<!-- -------- ESPACE VISUEL A GAUCHE AVEC ANIMATIONS -------- -->
+<!-- -------- ESPACE VISUEL A GAUCHE AVEC ANIMATIONS -------- -->
 
 	<div id="AllDaveOptions">
 
 		<div id="DaveCompteurs">
 			<div id="Dave" onclick="LancmtEvent()">
-				<!-- <div id="larme"></div> >> Test pour animation larme -->
 				<img id="clicker" src="images/hublot1.png">
 			</div>
 
 			<div id="Compteurs">
-				<p id="CompteurLarmes">Compteur de larmes : 0</p>
-				<p id="LarmesSeconde">Larmes par seconde : 0</p>
-				<p id="MultiNbLarmesClic">Multiplicateur du nombre de larmes / clic : x 1</p>
-				<p id="TotalLarmes">Total des larmes accumulées : 0</p>
+				<p id="CompteurLarmes">0</p>
+				<p id="LarmesSeconde">Par seconde : 0</p>
+				<p id="MultiNbLarmesClic">x 1</p>
 			</div>
 		</div>
 		
-		<!-- -------- OPTIONS A UPGRADER EN HAUT A DROITE -------- -->
+<!-- -------- OPTIONS A UPGRADER EN HAUT A DROITE -------- -->
 
 		<div id="AllOptions">
 
 			<div id="AllOptionUp">
 
-				<h1>Les options à upgrader</h1>
+				<h1>Des langages à upgrader</h1>
 
-				<table>
-					<tr>
-						<td><img src="./images/OptionUp1.png"></td>
-						<td><img src="./images/OptionUp1.png"></td>
-						<td><img src="./images/OptionUp1.png"></td>
-						<td><img src="./images/OptionUp1.png"></td>
+				<table id="TableOptionUp">
+					<tr id="Visuels">
+						<td id="TableOption1" colspan="3"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TableOption2" colspan="3"><img id="visuelUp" src="images/OptionUp2.png"></td>
+						<td id="TableOption3" colspan="3"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TableOption4" colspan="3"><img id="visuelUp" src="images/OptionUp1.png"></td>
 					</tr>
 					<tr id="Niveaux">
-						<td><button id="OptionUp1">Niveau 1 <Br>Prix : 20</button></td>
-						<td><button id="OptionUp2" type="button" disabled="true">Niveau 1 / Coût prochain achat : 50</button></td>
-						<td><button id="OptionUp3" type="button" disabled="true">Niveau 1 / Coût prochain achat : 100</button></td>
-						<td><button id="OptionUp4" type="button" disabled="true">Niveau 1 / Coût prochain achat : 500</button></td>
+						<td id="niveauUp1">1</td>
+						<td colspan="2"><button id="OptionUp1">20</button></td>
+						<td id="niveauUp2">1</td>
+						<td colspan="2"><button id="OptionUp2" disabled="true"> 50</button></td>
+						<td id="niveauUp3">1</td>
+						<td colspan="2"><button id="OptionUp3" disabled="true"> 100</button></td>
+						<td id="niveauUp4">1</td>
+						<td colspan="2"><button id="OptionUp4" disabled="true"> 500</button></td>
 					</tr>
-					<tr>
-						<td><img src="./images/OptionUp1.png"></td>
-						<td><img src="./images/OptionUp1.png"></td>
-						<td><img src="./images/OptionUp1.png"></td>
-						<td><img src="./images/OptionUp1.png"></td>
+					<tr id="ligneVide"><td></td></tr>
+					<tr id="Visuels">
+						<td id="TableOption5" colspan="3"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TableOption6" colspan="3"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TableOption7" colspan="3"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TableOption8" colspan="3"><img id="visuelUp" src="images/OptionUp1.png"></td>
 					</tr>
 					<tr id="Niveaux">
-						<td><button id="OptionUp5" type="button" disabled="true">Niveau 1 / Coût prochain achat : 1 000</button></td>
-						<td><button id="OptionUp6" type="button" disabled="true">Niveau 1 / Coût prochain achat : 5 000</button></td>
-						<td><button id="OptionUp7" type="button" disabled="true">Niveau 1 / Coût prochain achat : 25 000</button></td>
-						<td><button id="OptionUp8" type="button" disabled="true">Niveau 1 / Coût prochain achat : 50 000</button></td>
+						<td id="niveauUp5">1</td>
+						<td colspan="2"><button id="OptionUp5" disabled="true"> 1000</button></td>
+						<td id="niveauUp6">1</td>
+						<td colspan="2"><button id="OptionUp6" disabled="true"> 5000</button></td>
+						<td id="niveauUp7">1</td>
+						<td colspan="2"><button id="OptionUp7" disabled="true"> 25000</button></td>
+						<td id="niveauUp8">1</td>
+						<td colspan="2"><button id="OptionUp8" disabled="true"> 50000</button></td>
 					</tr>
+					<tr id="ligneVide"><td></td></tr>
 				</table>
 			</div>
 
 
-			<!-- -------- OPTIONS PONCTUELLES EN BAS A DROITE -------- -->
+<!-- -------- OPTIONS PONCTUELLES EN BAS A DROITE -------- -->
 
 			<div id="AllOptionPonc">
 				
-				<h1>Les options ponctuelles</h1>
+				<h1>Des options à faire pleurer</h1>
 
-				<div id="OptionPonc1"></div>
-
-				<div id="OptionPonc2"></div>
-
-				<div id="OptionPonc3"></div>
-
-				<div id="OptionPonc4"></div>
+				<table id="TableOptionsPonc">
+					<tr id="Visuels">
+						<td id="TablePonc1"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TablePonc2"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TablePonc3"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TablePonc4"><img id="visuelUp" src="images/OptionUp1.png"></td>
+					</tr>
+					<tr id="NiveauxPonc">
+						<td><button id="OptionPonc1" type="button" disabled="true"><img src="images/larme.png"> 25000</button></td>
+						<td><button id="OptionPonc2" type="button" disabled="true"><img src="images/larme.png"> 50000</button></td>
+						<td><button id="OptionPonc3" type="button" disabled="true"><img src="images/larme.png"> 25000000</button></td>
+						<td><button id="OptionPonc4" type="button" disabled="true"><img src="images/larme.png"> 500</button></td>
+					</tr>
+				</table>
 
 			</div>	
 
 		</div>
 	</div>
 
-	<!-- Les modales pour les events -->
+
+<!-- ------------ LES MODALES POUR LES EVENTS ------------ -->
 
 	<!-- Modal Carte Mystère 1 -->
 	<div id="ModalCarteMyst1" class="modal">
@@ -135,18 +153,19 @@
 		</div>
 	</div>
 
-	<!-- Scripts -->
 
-	<script src="./js/dave.js"></script>
-	<script type="text/javascript" src="./js/larme.js"></script>
-	<script type="text/javascript" src="./js/CartesMyst.js"></script>
+<!-- -------------------- SCRIPTS -------------------- -->
+
+<script src="./js/dave.js"></script>
+<script type="text/javascript" src="./js/CartesMyst.js"></script>
+<script src="./js/mouseover.js"></script>
 
 </body>
 
 <!-- -------------------- FOOTER -------------------- -->
 
 <footer>
-	
+	<p> Fais pleurer ton Dave, tous droits réservés. Un jeu réalisé par : Benoît, Mathilde & Sixtine © 2019</p>
 </footer>
 
 </html>
