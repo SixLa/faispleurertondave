@@ -15,102 +15,21 @@ var VModalCarteMyst6 = document.getElementById("ModalCarteMyst6");
 
 var span = document.getElementsByClassName("close")[0];
 
-function Modal1(){
-	function TexteModal1() {
-		VModalCarteMyst1.style.display = "block";
+
+
+
+
+function Modal(VModalCarteMyst){
+	function TexteModal() {
+		VModalCarteMyst.style.display = "block";
 	}
-	TexteModal1()
+	TexteModal()
 	span.onclick = function() {
-		VModalCarteMyst1.style.display = "none";
+		VModalCarteMyst.style.display = "none";
 	}
 	window.onclick = function(event) {
-		if (event.target == VModalCarteMyst1) {
-			VModalCarteMyst1.style.display = "none";
-		}
-	}
-}
-
-// Modale 2
-
-function Modal2(){
-	function TexteModal2() {
-		VModalCarteMyst2.style.display = "block";
-	}
-	TexteModal2()
-	span.onclick = function() {
-		VModalCarteMyst2.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == VModalCarteMyst2) {
-			VModalCarteMyst2.style.display = "none";
-		}
-	}
-}
-
-// Modale 3
-
-function Modal3(){
-	function TexteModal3() {
-		VModalCarteMyst3.style.display = "block";
-	}
-	TexteModal3()
-	span.onclick = function() {
-		VModalCarteMyst3.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == VModalCarteMyst3) {
-			VModalCarteMyst3.style.display = "none";
-		}
-	}
-}
-
-// Modale 4
-
-function Modal4(){
-	function TexteModal4() {
-		VModalCarteMyst4.style.display = "block";
-	}
-	TexteModal4()
-	span.onclick = function() {
-		VModalCarteMyst4.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == VModalCarteMyst4) {
-			VModalCarteMyst4.style.display = "none";
-		}
-	}
-}
-
-// Modale 5
-
-function Modal5(){
-	function TexteModal5() {
-		VModalCarteMyst5.style.display = "block";
-	}
-	TexteModal5()
-	span.onclick = function() {
-		VModalCarteMyst5.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == VModalCarteMyst5) {
-			VModalCarteMyst5.style.display = "none";
-		}
-	}
-}
-
-// Modale 6
-
-function Modal6(){
-	function TexteModal6() {
-		VModalCarteMyst6.style.display = "block";
-	}
-	TexteModal6()
-	span.onclick = function() {
-		VModalCarteMyst6.style.display = "none";
-	}
-	window.onclick = function(event) {
-		if (event.target == VModalCarteMyst6) {
-			VModalCarteMyst6.style.display = "none";
+		if (event.target == VModalCarteMyst) {
+			VModalCarteMyst.style.display = "none";
 		}
 	}
 }
@@ -125,7 +44,7 @@ function EventRandom() {
 
 		function CarteMyst1() {
 			VCompteurLarmes = (VCompteurLarmes)-(VCompteurLarmes/4);
-			Modal1();
+			Modal(VModalCarteMyst1);
 		}
 
 
@@ -133,28 +52,28 @@ function EventRandom() {
 
 		function CarteMyst2() {
 			VCompteurLarmes = (VCompteurLarmes)-(VCompteurLarmes/2);
-			Modal2();
+			Modal(VModalCarteMyst2);
 		}
 
 		// CarteMyst3 : 75% des larmes actuelles en moins.
 
 		function CarteMyst3() {
 			VCompteurLarmes = (VCompteurLarmes)-((VCompteurLarmes/4)*3);
-			Modal3();
+			Modal(VModalCarteMyst3);
 		}
 
 		// CarteMyst4 : 25% des larmes actuelles en plus.
 
 		function CarteMyst4() {
 			VCompteurLarmes = (VCompteurLarmes)+(VCompteurLarmes/4);
-			Modal4();
+			Modal(VModalCarteMyst4);
 		}
 
 		// CarteMyst5 : 50% des larmes actuelles en plus.
 
 		function CarteMyst5() {
 			VCompteurLarmes = (VCompteurLarmes)+(VCompteurLarmes/2);
-			Modal5();
+			Modal(VModalCarteMyst5);
 
 		}
 
@@ -162,7 +81,7 @@ function EventRandom() {
 
 		function CarteMyst6() {
 			VCompteurLarmes = (VCompteurLarmes)+((VCompteurLarmes/4)*3);
-			Modal6();
+			Modal(VModalCarteMyst6);
 		}
 
 
