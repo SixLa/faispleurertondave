@@ -16,9 +16,6 @@ var VModalCarteMyst6 = document.getElementById("ModalCarteMyst6");
 var span = document.getElementsByClassName("close")[0];
 
 
-
-
-
 function Modal(VModalCarteMyst){
 	function TexteModal() {
 		VModalCarteMyst.style.display = "block";
@@ -94,7 +91,7 @@ function EventRandom() {
 					else if (VNombreRandom==5) {CarteMyst5()} 
 						else {CarteMyst6()}
 
-							$AfficheCompteurLarmes.innerHTML = "Compteur de larmes : " +Math.trunc(VCompteurLarmes);
+							$AfficheCompteurLarmes.innerHTML = Math.trunc(VCompteurLarmes);
 					}
 
 // Quand on appuie sur le bouton canard, savoir si l'event va se déclencher

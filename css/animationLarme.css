@@ -1,0 +1,38 @@
+/*===== ANIMATION LARME CSS =====*/
+
+#positionLarmeGauche {
+	width: 30px;
+	height: 100px;
+	padding-top: 38.5vh;
+	padding-left: 16.75vw;
+}
+
+#positionLarmeDroite {
+	width: 30px;
+	height: 100px;
+	float: right;
+	padding-top: 38.5vh;
+	padding-left: 65px;
+}
+
+#imgLarme {
+	width: 18px;
+	bottom: 61.5vh;
+	left: 16.75vw;
+	opacity: 0;
+}
+
+.animLarme {
+	position: absolute;
+	animation-name: slidein;
+	animation-duration: 1s;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 0%;
+  }
+
+  to{
+  	margin-top: 5%;
+  }
