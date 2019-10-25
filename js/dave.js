@@ -69,10 +69,6 @@ var NextAchatOptionPonc2 = 50000; // Prix de départ de l'OptionPonc2
 $AfficheOptionPonc3 = document.getElementById("OptionPonc3"); // Maj bouton OptionPonc3
 var NextAchatOptionPonc3 = 25000000; // Prix de départ de l'OptionPonc3
 
-// VARIABLES OPTIONPONC4 : LANCE CARTE MYSTERE
-$AfficheOptionPonc4 = document.getElementById("OptionPonc4"); // Maj bouton OptionPonc3
-var NextAchatOptionPonc4 = 30000; // Prix de départ de l'OptionPonc3
-
 
 
 ///////////////////////////// AJOUT LARMES AVEC CLICKER CANARD /////////////////////////////
@@ -373,24 +369,32 @@ var NextAchatOptionPonc4 = 30000; // Prix de départ de l'OptionPonc3
 //////////////////////////// OPTION PONCTUELLE 1 ////////////////////////////
 
 	function lancerOptionPonc1() {
-		VNiveauOptionUp1++;
-		NextAchatOptionUp1 = NextAchatOptionUp1 * 2;
-		VNiveauOptionUp2++;
-		NextAchatOptionUp2 = NextAchatOptionUp2 * 2;
-		VNiveauOptionUp3++;
-		NextAchatOptionUp3 = NextAchatOptionUp3 * 2;
-		VNiveauOptionUp4++;
-		NextAchatOptionUp4 = NextAchatOptionUp4 * 2;
-		NextAchatOptionPonc1 = NextAchatOptionPonc1 * 3;
-		$AfficheNiveauOptionUp1.innerHTML = VNiveauOptionUp1;
-		$AfficheNiveauOptionUp2.innerHTML = VNiveauOptionUp2;
-		$AfficheNiveauOptionUp3.innerHTML = VNiveauOptionUp3;
-		$AfficheNiveauOptionUp4.innerHTML = VNiveauOptionUp4;
-		$AfficheAchatOptionUp1.innerHTML = NextAchatOptionUp1;
-		$AfficheAchatOptionUp2.innerHTML = NextAchatOptionUp2;
-		$AfficheAchatOptionUp3.innerHTML = NextAchatOptionUp3;
-		$AfficheAchatOptionUp4.innerHTML = NextAchatOptionUp4;
-		$AfficheOptionPonc1.innerHTML = NextAchatOptionPonc1;
+		if ((VCompteurLarmes - NextAchatOptionPonc1) >= 0) {
+			VCompteurLarmes = VCompteurLarmes - NextAchatOptionPonc1;
+			$AfficheCompteurLarmes.innerHTML = Math.trunc(VCompteurLarmes);
+			VNiveauOptionUp1++;
+			NextAchatOptionUp1 = NextAchatOptionUp1 * 2;
+			VNiveauOptionUp2++;
+			NextAchatOptionUp2 = NextAchatOptionUp2 * 2;
+			VNiveauOptionUp3++;
+			NextAchatOptionUp3 = NextAchatOptionUp3 * 2;
+			VNiveauOptionUp4++;
+			NextAchatOptionUp4 = NextAchatOptionUp4 * 2;
+			NextAchatOptionPonc1 = NextAchatOptionPonc1 * 3;
+			$AfficheNiveauOptionUp1.innerHTML = VNiveauOptionUp1;
+			$AfficheNiveauOptionUp2.innerHTML = VNiveauOptionUp2;
+			$AfficheNiveauOptionUp3.innerHTML = VNiveauOptionUp3;
+			$AfficheNiveauOptionUp4.innerHTML = VNiveauOptionUp4;
+			$AfficheAchatOptionUp1.innerHTML = NextAchatOptionUp1;
+			$AfficheAchatOptionUp2.innerHTML = NextAchatOptionUp2;
+			$AfficheAchatOptionUp3.innerHTML = NextAchatOptionUp3;
+			$AfficheAchatOptionUp4.innerHTML = NextAchatOptionUp4;
+			$AfficheOptionPonc1.innerHTML = NextAchatOptionPonc1;
+		}
+
+		else {
+			alert("Gagnez plus de larmes pour pouvoir acheter l'option");
+		}
 	}
 
 	$AfficheOptionPonc1.onclick = lancerOptionPonc1;
@@ -399,9 +403,16 @@ var NextAchatOptionPonc4 = 30000; // Prix de départ de l'OptionPonc3
 //////////////////////////// OPTION PONCTUELLE 2 ////////////////////////////
 
 	function lancerOptionPonc2() {
-		window.open('https://youtu.be/gG5abwgyX7k?t=77');
-		NextAchatOptionPonc2 = NextAchatOptionPonc2 * 2;
-		$AfficheOptionPonc2.innerHTML = NextAchatOptionPonc2;
+		if ((VCompteurLarmes - NextAchatOptionPonc2) >= 0) {
+			VCompteurLarmes = VCompteurLarmes - NextAchatOptionPonc2;
+			$AfficheCompteurLarmes.innerHTML = Math.trunc(VCompteurLarmes);
+			window.open('https://youtu.be/gG5abwgyX7k?t=77');
+			NextAchatOptionPonc2 = NextAchatOptionPonc2 * 2;
+			$AfficheOptionPonc2.innerHTML = NextAchatOptionPonc2;
+		}
+		else {
+			alert("Gagnez plus de larmes pour pouvoir acheter l'option");
+		}
 	}
 
 	$AfficheOptionPonc2.onclick = lancerOptionPonc2;
@@ -410,36 +421,31 @@ var NextAchatOptionPonc4 = 30000; // Prix de départ de l'OptionPonc3
 /////////////////////////// OPTION PONCTUELLE 3 ////////////////////////////
 
 	function lancerOptionPonc3() {
-
-		VNiveauOptionUp5++;
-		NextAchatOptionUp5 = NextAchatOptionUp5 * 2;
-		VNiveauOptionUp6++;
-		NextAchatOptionUp6 = NextAchatOptionUp6 * 2;
-		VNiveauOptionUp7++;
-		NextAchatOptionUp7 = NextAchatOptionUp7 * 2;
-		VNiveauOptionUp8++;
-		NextAchatOptionUp8 = NextAchatOptionUp8 * 2;
-		NextAchatOptionPonc3 = NextAchatOptionPonc3 * 3;
-		$AfficheNiveauOptionUp5.innerHTML = VNiveauOptionUp5;
-		$AfficheNiveauOptionUp6.innerHTML = VNiveauOptionUp6;
-		$AfficheNiveauOptionUp7.innerHTML = VNiveauOptionUp7;
-		$AfficheNiveauOptionUp8.innerHTML = VNiveauOptionUp8;
-		$AfficheAchatOptionUp5.innerHTML = NextAchatOptionUp5;
-		$AfficheAchatOptionUp6.innerHTML = NextAchatOptionUp6;
-		$AfficheAchatOptionUp7.innerHTML = NextAchatOptionUp7;
-		$AfficheAchatOptionUp8.innerHTML = NextAchatOptionUp8;
-		$AfficheOptionPonc3.innerHTML = NextAchatOptionPonc3;
+		if ((VCompteurLarmes - NextAchatOptionPonc3) >= 0) {
+			VCompteurLarmes = VCompteurLarmes - NextAchatOptionPonc3;
+			$AfficheCompteurLarmes.innerHTML = Math.trunc(VCompteurLarmes);
+			VNiveauOptionUp5++;
+			NextAchatOptionUp5 = NextAchatOptionUp5 * 2;
+			VNiveauOptionUp6++;
+			NextAchatOptionUp6 = NextAchatOptionUp6 * 2;
+			VNiveauOptionUp7++;
+			NextAchatOptionUp7 = NextAchatOptionUp7 * 2;
+			VNiveauOptionUp8++;
+			NextAchatOptionUp8 = NextAchatOptionUp8 * 2;
+			NextAchatOptionPonc3 = NextAchatOptionPonc3 * 3;
+			$AfficheNiveauOptionUp5.innerHTML = VNiveauOptionUp5;
+			$AfficheNiveauOptionUp6.innerHTML = VNiveauOptionUp6;
+			$AfficheNiveauOptionUp7.innerHTML = VNiveauOptionUp7;
+			$AfficheNiveauOptionUp8.innerHTML = VNiveauOptionUp8;
+			$AfficheAchatOptionUp5.innerHTML = NextAchatOptionUp5;
+			$AfficheAchatOptionUp6.innerHTML = NextAchatOptionUp6;
+			$AfficheAchatOptionUp7.innerHTML = NextAchatOptionUp7;
+			$AfficheAchatOptionUp8.innerHTML = NextAchatOptionUp8;
+			$AfficheOptionPonc3.innerHTML = NextAchatOptionPonc3;
+		}
+		else {
+			alert("Gagnez plus de larmes pour pouvoir acheter l'option");
+		}
 	}
 
 	$AfficheOptionPonc3.onclick = lancerOptionPonc3;
-
-
-/////////////////////////// OPTION PONCTUELLE 4 ////////////////////////////
-
-	function lancerOptionPonc4() {
-		NextAchatOptionPonc4 = NextAchatOptionPonc4 * 2;
-		$AfficheOptionPonc4.innerHTML = NextAchatOptionPonc4;
-	}
-
-	$AfficheOptionPonc4.onclick = EventRandom;
-	$AfficheOptionPonc4.onclick = lancerOptionPonc4;

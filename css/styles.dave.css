@@ -36,10 +36,10 @@ body {
 /* Bouton à cliquer */
 #clicker {
 	z-index: 1;
-	width: 100px;
+	width: 120px;
 	position: absolute;
-	bottom: 35vh;
-	left: 17.5vw;
+	bottom: 32vh;
+	left: 17vw;
 }
 
 #clicker:active {
@@ -49,9 +49,9 @@ body {
 /* Compteurs */
 #Compteurs {
 	background-color: #F69B52;
-	background-image: url(../images/larme.png);
+	background-image: url(../images/bandeau.png);
 	background-repeat: no-repeat;
-	background-position: 10px center;
+	background-size: cover;
 	width: 40vw;
 	height: 8vh;
 	display: flex;
@@ -127,7 +127,7 @@ tbody td {
 }
 
 #Niveaux td button {
-	background-color: #18EDB5;
+	background-color: #EE592B;
 	background-image: url(../images/larme.png);
 	background-repeat: no-repeat;
 	background-position: 5px center;
@@ -176,7 +176,7 @@ tbody td {
 }
 
 #NiveauxPonc td button {
-	background-color: #31B6C7;
+	background-color: #23AD93;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
@@ -206,10 +206,8 @@ tbody td {
 	width: 20vw; /* Full width */
 	height: 20vw; /* Full height */
 	overflow: auto; /* Enable scroll if needed */
-	background-color: orange !important; /* Fallback color */
-	background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-	font-family: Myriad Pro !important;
-;
+	background-image: url(../images/background-modale.png) !important; /* Fallback color */
+	padding: 20px;
 }
 ​
 /* Modal Content/Box */
@@ -232,7 +230,6 @@ tbody td {
 	text-decoration: none;
 	cursor: pointer;
 }
-
 
 
 /* --------------------- FOOTER --------------------- */
