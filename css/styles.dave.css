@@ -76,6 +76,12 @@ h1 {
 	color: #D3D3D3;
 }
 
+h2{
+	font-weight: normal;
+	background-size: 20px;
+	font-family: Calibri;
+}
+
 /* Bloc AllOptionUP & AllOptionsPonc */
 #AllOptions {
 	width: 60vw;
@@ -198,38 +204,39 @@ tbody td {
 /* -------------------- CARTES MYSTERE -------------------- */
 ​
 /* The Modal (background) */
-#ModalCarteMyst1, #ModalCarteMyst1, #ModalCarteMyst2, #ModalCarteMyst3, #ModalCarteMyst4, #ModalCarteMyst5, #ModalCarteMyst6 {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	left: 10vw;
-	top: 10vw;
-	width: 20vw; /* Full width */
-	height: 20vw; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-image: url(../images/background-modale.png) !important; /* Fallback color */
-	padding: 20px;
-}
-​
+	#ModalCarteMyst1, #ModalCarteMyst1, #ModalCarteMyst2, #ModalCarteMyst3, #ModalCarteMyst4, #ModalCarteMyst5, #ModalCarteMyst6 {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		left: 10vw;
+		top: 10vw;
+		width: 20vw; /* Full width */
+		height: 20vw; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-image: url(../images/background-modale.png) !important; /* Fallback color */
+		padding: 20px;
+	;
+	}
+	​
 /* Modal Content/Box */
-.modal-content {
-	margin: 15% auto; /* 15% from the top and centered */
-	padding: 20px;
-	border: 1px solid #888;
-	width: 30%; /* Could be more or less, depending on screen size */
-}
-​
+	.modal-content {
+		margin: 15% auto; /* 15% from the top and centered */
+		padding: 20px;
+		border: 1px solid #888;
+		width: 30%; /* Could be more or less, depending on screen size */
+	}
+	​
 /* The Close Button */
-.close {
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-}
-​
-.close:hover,
-.close:focus {
-	text-decoration: none;
-	cursor: pointer;
-}
+	.close {
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+	​
+	.close:hover,
+	.close:focus {
+		text-decoration: none;
+		cursor: pointer;
+	}
 
 
 /* --------------------- FOOTER --------------------- */

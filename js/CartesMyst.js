@@ -9,12 +9,6 @@ var VModalCarteMyst4 = document.getElementById("ModalCarteMyst4");
 var VModalCarteMyst5 = document.getElementById("ModalCarteMyst5");
 var VModalCarteMyst6 = document.getElementById("ModalCarteMyst6");
 
-
-// VARIABLES OPTIONPONC4 : LANCE CARTE MYSTERE
-$AfficheOptionPonc4 = document.getElementById("OptionPonc4"); // Maj bouton OptionPonc4
-var NextAchatOptionPonc4 = 30000; // Prix de départ de l'OptionPonc4
-
-
 // Les modales pour les cartes mystères
 
 // Modale 1
@@ -33,7 +27,7 @@ function Modal(VModalCarteMyst){
 	window.onclick = function(event) {
 		if (event.target == VModalCarteMyst) {
 			VModalCarteMyst.style.display = "none";
-		}
+		} 
 	}
 }
 
@@ -49,6 +43,7 @@ function EventRandom() {
 			VCompteurLarmes = (VCompteurLarmes)-(VCompteurLarmes/4);
 			Modal(VModalCarteMyst1);
 		}
+
 
 		// CarteMyst2 : 50% des larmes actuelles en moins.
 
@@ -76,6 +71,7 @@ function EventRandom() {
 		function CarteMyst5() {
 			VCompteurLarmes = (VCompteurLarmes)+(VCompteurLarmes/2);
 			Modal(VModalCarteMyst5);
+
 		}
 
 		// CarteMyst6 : 75% des larmes actuelles en plus.
@@ -102,7 +98,7 @@ function EventRandom() {
 
 function LancmtEvent() {
 	VChanceDeLancmt = Math.floor(Math.random() * 101);
-	if (VChanceDeLancmt<6) {EventRandom()} 
+	if (VChanceDeLancmt<2) {EventRandom()} 
 }
 
 
@@ -123,3 +119,5 @@ function LancmtEvent() {
 	}
 
 	$AfficheOptionPonc4.onclick = lancerOptionPonc4;
+
+
