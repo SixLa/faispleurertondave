@@ -27,7 +27,7 @@ function Modal(VModalCarteMyst){
 	window.onclick = function(event) {
 		if (event.target == VModalCarteMyst) {
 			VModalCarteMyst.style.display = "none";
-		}
+		} 
 	}
 }
 
@@ -98,5 +98,5 @@ function EventRandom() {
 
 function LancmtEvent() {
 	VChanceDeLancmt = Math.floor(Math.random() * 101);
-	if (VChanceDeLancmt<6) {EventRandom()} 
+	if (VChanceDeLancmt<2) {EventRandom()} 
 }
