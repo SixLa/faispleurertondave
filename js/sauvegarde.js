@@ -6,7 +6,7 @@
 //==== ETAPE 02 ====//
 //Rassembler tous les localStorage de chaque fonction, dans une fonction//
 function sauvegarde(){
-	localStorage.setItem("fonction 1",resultat); 
+	localStorage.setItem("fonction 1", resultat); 
 	localStorage.setItem("fonction 2", incrementer);
 	localStorage.setItem("fonction 3", autoclonage);
 }

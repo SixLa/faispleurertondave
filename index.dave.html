@@ -92,16 +92,16 @@
 
 				<table id="TableOptionsPonc">
 					<tr id="Visuels">
-						<td id="TablePonc1"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TablePonc1"><img id="visuelUp" src="images/OptionPonc1.png"></td>
 						<td id="TablePonc2"><img id="visuelUp" src="images/OptionPonc2.png"></td>
 						<td id="TablePonc3"><img id="visuelUp" src="images/OptionPonc3.png"></td>
 						<td id="TablePonc4"><img id="visuelUp" src="images/OptionUp1.png"></td>
 					</tr>
 					<tr id="NiveauxPonc">
-						<td><button id="OptionPonc1" type="button" disabled="true"><img src="images/larme.png"> 25000</button></td>
-						<td><button id="OptionPonc2" type="button" disabled="true"><img src="images/larme.png"> 50000</button></td>
-						<td><button id="OptionPonc3" type="button" disabled="true"><img src="images/larme.png"> 25000000</button></td>
-						<td><button id="OptionPonc4" type="button"><img src="images/larme.png"> 30000</button></td>
+						<td><button id="OptionPonc1" type="button" title="Augmente les 4 premiers langages d'1 niveau" disabled="true">25000</button></td>
+						<td><button id="OptionPonc2" type="button" title="Option surprise !" disabled="true">50000</button></td>
+						<td><button id="OptionPonc3" type="button" title="Augmente les 4 derniers langages d'1 niveau" disabled="true">25000000</button></td>
+						<td><button id="OptionPonc4" type="button" title="Lance une carte mystère aléatoire">30000</button></td>
 					</tr>
 				</table>
 
@@ -116,48 +116,54 @@
 	<!-- Modal Carte Mystère 1 -->
 	<div id="ModalCarteMyst1" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Hello Kitty</B> <Br><Br> Dave est obnubilé devant une vidéo de chatons vraiment troooooop mignons ! <Br><Br> Vous perdez 25% de vos larmes car la chaleur apparue dans son coeur à leur vue les assèche.</h2>
+			<img id="imgModal" src="images/chatons.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 2 -->
 	<div id="ModalCarteMyst2" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h2><B>Une belle personne</B><Br><Br> Dave est beaucoup trop captivé par le "Top des 100 plus belles personnes de l'univers" pour penser à pleurer.<Br><Br> Dommage pour ces 50% de larmes que vous perdez...</h2>
+			<span class="close"></span>
+			<h2><B>Alerte à Malibu</B><Br><Br> Dave est beaucoup trop captivé par sa série préférée pour penser à pleurer.<Br><Br> Dommage pour ces 50% de larmes que vous perdez...</h2>
+			<img id="imgModal" src="images/baywatch.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 3 -->
 	<div id="ModalCarteMyst3" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Légalisez les cookies (de Mamie)</B> <Br><Br> Dave a reçu un colis avec les délicieux cookies cuisinés par sa Mamie. Ils sont tellement bons qu'il n'a plus envie de pleurer. <Br><Br>Vous perdez 75% de vos larmes actuelles.</h2>
+			<img id="imgModal" src="images/cookie-mamie.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 4 -->
 	<div id="ModalCarteMyst4" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Chouette, une mise à jour !</B> <Br><Br> L'ordinateur de Dave a une mise à jour à faire. <Br><Br>UNE TRES GROSSE MISE A JOUR qui vous engendre 25% de larmes supplémentaires...</h2>
+			<img id="imgModal" src="images/maj.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 5 -->
 	<div id="ModalCarteMyst5" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h2><B>Happy Birthday Mr Dave !</B> <Br><Br> C'est l'anniversaire de Dave ! Quel dommage qu'il soit seul avec sa bouteille de champagne. <Br><Br>Il est tellement triste que vous gagnez 50% de larmes supplémentaires ! </h2>
+			<span class="close"></span>
+			<h2><B>Happy Birthday Mr Dave !</B> <Br><Br> C'est l'anniversaire de Dave ! Quel dommage qu'il soit seul avec sa part de gâteau. <Br><Br>Il est tellement triste que vous gagnez 50% de larmes supplémentaires ! </h2>
+			<img id="imgModal" src="images/anniversaire.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 6 -->
 	<div id="ModalCarteMyst6" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Hot Stuff</B> <Br><Br> Larmes + prise de courant = incendie. OUPS Dave n'a plus Internet, il est au bout de sa vie. <Br><Br> Vous gagnez 75% de larmes supplémentaires !</h2>
+			<img id="imgModal" src="images/fire.jpg">
 		</div>
 	</div>
 
@@ -168,28 +174,10 @@
 <script type="text/javascript" src="./js/CartesMyst.js"></script>
 <script src="./js/mouseover.js"></script>
 <script src="./js/animationLarme.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#cf7848",
-      "text": "#000000"
-    },
-    "button": {
-      "background": "transparent",
-      "text": "#000000",
-      "border": "#000000"
-    }
-  },
-  "content": {
-    "message": "\nCe site utilise des cookies afin de vous proposer une expérience d'une immersion totale dans le monde des développeurs.\nAcceptez-les, vous ne le regretterez pas !",
-    "dismiss": "Les cookies, c'est trop bon !",
-    "link": "En savoir plus."
-  }
-});
-</script>
+<script src="./js/cookie.js"></script>
+
+
 </body>
 
 <!-- -------------------- FOOTER -------------------- -->

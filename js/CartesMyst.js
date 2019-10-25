@@ -9,6 +9,11 @@ var VModalCarteMyst4 = document.getElementById("ModalCarteMyst4");
 var VModalCarteMyst5 = document.getElementById("ModalCarteMyst5");
 var VModalCarteMyst6 = document.getElementById("ModalCarteMyst6");
 
+// VARIABLES OPTIONPONC4 : LANCE CARTE MYST
+$AfficheOptionPonc4 = document.getElementById("OptionPonc4"); // Maj bouton OptionPonc4
+var NextAchatOptionPonc4 = 30000; // Prix de départ de l'OptionPonc4
+
+
 // Les modales pour les cartes mystères
 
 // Modale 1
