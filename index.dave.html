@@ -6,8 +6,7 @@
   <title>Fais pleurer ton Dave</title>
   <link rel="stylesheet" href="./css/styles.dave.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
-
+  <link rel="stylesheet" type="text/css" href="css/animationLarme.css">
 
 </head>
 
@@ -18,7 +17,15 @@
 	<div id="AllDaveOptions">
 
 		<div id="DaveCompteurs">
-			<div id="Dave" onclick="LancmtEvent()">
+			<div id="Dave" onclick="LancmtEvent(); animationLarme(); animationLarmeDroite()">
+				<!--===== ANIMATION LARME HTML =====-->
+				<div id="positionLarmeGauche">
+					<img id="imgLarmeGauche" src="images/larme.png">
+				</div>
+				<div id="positionLarmeDroite">
+					<img id="imgLarmeDroite" src="images/larme.png">
+				</div>
+				<!--===== CLICKER =====-->
 				<img id="clicker" src="images/hublot1.png">
 			</div>
 
@@ -93,7 +100,7 @@
 						<td><button id="OptionPonc1" type="button" disabled="true"><img src="images/larme.png"> 25000</button></td>
 						<td><button id="OptionPonc2" type="button" disabled="true"><img src="images/larme.png"> 50000</button></td>
 						<td><button id="OptionPonc3" type="button" disabled="true"><img src="images/larme.png"> 25000000</button></td>
-						<td><button id="OptionPonc4" type="button" disabled="true"><img src="images/larme.png"> 500</button></td>
+						<td><button id="OptionPonc4" type="button"><img src="images/larme.png"> 30000</button></td>
 					</tr>
 				</table>
 
@@ -109,7 +116,7 @@
 	<div id="ModalCarteMyst1" class="modal">
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<h3>CarteMyst1 | Hello Kitty | Dave est obnubilé devant une vidéo de chatons troooooop mignons, vous perdez 25% de vos larmes car la chaleur apparue dans son coeur à leur vue les assèche.</h3>
+			<h3><B>Hello Kitty</B> <Br><Br> Dave est obnubilé devant une vidéo de chatons c'est vraiment troooooop mignon ! <Br> Vous perdez 25% de vos larmes car la chaleur apparue dans son coeur à leur vue les assèche.</h3>
 		</div>
 	</div>
 
@@ -125,7 +132,7 @@
 	<div id="ModalCarteMyst3" class="modal">
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<h3>CarteMyst3 | Légalisez les cookies (de Mamie) | Dave a reçu un colis avec les délicieux cookies cuisinés par sa Mamie. Ils sont tellement bons qu'il ne fait que rigoler, vous faisant perdre 75% de vos larmes actuelles.</h3>
+			<h3><B>Légalisez les cookies (de Mamie)</B> <Br><Br> Dave a reçu un colis avec les délicieux cookies cuisinés par sa Mamie. Ils sont tellement bons qu'il n'a plus envie de pleurer. <Br><Br>Vous perdez 75% de vos larmes actuelles.</h3>
 		</div>
 	</div>
 
@@ -133,7 +140,7 @@
 	<div id="ModalCarteMyst4" class="modal">
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<h3>CarteMyst4 | Chouette, une mise à jour ! | L'ordinateur de Dave a une mise à jour à faire. UNE TRES GROSSE MISE A JOUR. Qui vous engendre 25% de larmes supplémentaires...</h3>
+			<h3><B>Chouette, une mise à jour !</B> <Br><Br> L'ordinateur de Dave a une mise à jour à faire. <Br><Br>UNE TRES GROSSE MISE A JOUR qui vous engendre 25% de larmes supplémentaires...</h3>
 		</div>
 	</div>
 
@@ -141,7 +148,7 @@
 	<div id="ModalCarteMyst5" class="modal">
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<h3>CarteMyst5 | Happy Birthday Mr Dave ! | C'est l'anniversaire de Dave ! Quel dommage qu'il soit seul avec sa bouteille de champagne. </h3>
+			<h3><B>Happy Birthday Mr Dave !</B> <Br><Br> C'est l'anniversaire de Dave ! Quel dommage qu'il soit seul avec sa bouteille de champagne. <Br><Br>Il est tellement triste que vous gagnez 50% de larmes supplémentaires ! </h3>
 		</div>
 	</div>
 
@@ -149,7 +156,7 @@
 	<div id="ModalCarteMyst6" class="modal">
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<h3>CarteMyst6 | Hot Stuff | Larmes + prise de courant = incendie. OUPS.</h3>
+			<h3><B>Hot Stuff</B> <Br><Br> Larmes + prise de courant = incendie. OUPS Dave n'a plus Internet, il est au bout de sa vie. <Br><Br> Vous gagnez 75% de larmes supplémentaires !</h3>
 		</div>
 	</div>
 
@@ -159,13 +166,21 @@
 <script src="./js/dave.js"></script>
 <script type="text/javascript" src="./js/CartesMyst.js"></script>
 <script src="./js/mouseover.js"></script>
+<script src="js/animationLarme.js"></script>
 
 </body>
 
 <!-- -------------------- FOOTER -------------------- -->
 
 <footer>
-	<p> Fais pleurer ton Dave, tous droits réservés. Un jeu réalisé par : Benoît, Mathilde & Sixtine © 2019</p>
+	<p> Fais pleurer ton Dave, tous droits réservés. Un jeu réalisé par : <a href="https://benoitd34.github.io/" target="blank">Benoît</a>, <a href="https://mathilde-garin.github.io/images/cv-mathilde-garin-developpeuse-front.pdf" target="blank">Mathilde</a> & <a href="https://sixla.github.io/CvSixtineLanord.pdf" target="blank">Sixtine</a> © 2019</p>
+	<div>
+		<a href="https://benoitd34.github.io/" target="blank"><img src="images/logo-benoit.png"></a>
+		<a href="https://mathilde-garin.github.io" target="blank"><img src="images/logo-mathilde.png"></a>
+		<a href="https://sixla.github.io/" target="blank"><img src="images/logo-sixtine.png"></a>
+	</div>
 </footer>
 
 </html>
+
+
