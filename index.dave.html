@@ -43,6 +43,8 @@
 
 			<div id="AllOptionUp">
 
+				<button id="sauvegarde" onclick="sauvegarde()">Sauvegarde</button>
+				<button id="charger" onclick="reload()">Charger</button>
 				<h1>Des langages à upgrader</h1>
 
 				<table id="TableOptionUp">
@@ -54,13 +56,13 @@
 					</tr>
 					<tr id="Niveaux">
 						<td id="niveauUp1">1</td>
-						<td colspan="2"><button id="OptionUp1">20</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp1">20<span class="tooltiptext">Augmente le nombre de larmes récolté à chaque clic</span></button></td>
 						<td id="niveauUp2">1</td>
-						<td colspan="2"><button id="OptionUp2" disabled="true"> 50</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp2" disabled="true"> 50<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp3">1</td>
-						<td colspan="2"><button id="OptionUp3" disabled="true"> 100</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp3" disabled="true"> 100<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp4">1</td>
-						<td colspan="2"><button id="OptionUp4" disabled="true"> 500</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp4" disabled="true"> 500<span class="tooltiptext">Augmente le nombre de larmes récolté à chaque clic</span></button></td>
 					</tr>
 					<tr id="ligneVide"><td></td></tr>
 					<tr id="Visuels">
@@ -71,13 +73,13 @@
 					</tr>
 					<tr id="Niveaux">
 						<td id="niveauUp5">1</td>
-						<td colspan="2"><button id="OptionUp5" disabled="true"> 1000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp5" disabled="true"> 1000<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp6">1</td>
-						<td colspan="2"><button id="OptionUp6" disabled="true"> 5000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp6" disabled="true"> 5000<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp7">1</td>
-						<td colspan="2"><button id="OptionUp7" disabled="true"> 25000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp7" disabled="true"> 25000<span class="tooltiptext">Augmente le nombre de larmes récolté à chaque clic</span></button></td>
 						<td id="niveauUp8">1</td>
-						<td colspan="2"><button id="OptionUp8" disabled="true"> 50000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp8" disabled="true"> 50000<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 					</tr>
 					<tr id="ligneVide"><td></td></tr>
 				</table>
@@ -95,13 +97,13 @@
 						<td id="TablePonc1"><img id="visuelUp" src="images/OptionPonc1.png"></td>
 						<td id="TablePonc2"><img id="visuelUp" src="images/OptionPonc2.png"></td>
 						<td id="TablePonc3"><img id="visuelUp" src="images/OptionPonc3.png"></td>
-						<td id="TablePonc4"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TablePonc4"><img id="visuelUp" src="images/OptionPonc4.png"></td>
 					</tr>
 					<tr id="NiveauxPonc">
-						<td><button id="OptionPonc1" type="button" title="Augmente les 4 premiers langages d'1 niveau" disabled="true">25000</button></td>
-						<td><button id="OptionPonc2" type="button" title="Option surprise !" disabled="true">50000</button></td>
-						<td><button id="OptionPonc3" type="button" title="Augmente les 4 derniers langages d'1 niveau" disabled="true">25000000</button></td>
-						<td><button id="OptionPonc4" type="button" title="Lance une carte mystère aléatoire">30000</button></td>
+						<td><button class="tooltip" id="OptionPonc1" type="button" disabled="true">25000<span class="tooltiptext">Oh non la machine à café est en panne ! Comment Dave va-t-il tenir toute la journée ?... <Br><Br>Achetez cette option et augmentez ainsi les 4 premiers langages d'1 niveau !</span></button></td>
+						<td><button class="tooltip" id="OptionPonc2" type="button" disabled="true">50000<span class="tooltiptext">L'ami développeur de Dave n'a vraiment rien compris, il n'arrête pas de déranger Dave dans son travail. <Br><Br>Débloquez cette option surprise !</span></button></td>
+						<td><button class="tooltip" id="OptionPonc3" type="button" disabled="true">25000000<span class="tooltiptext">... Ô désespoir !<Br><Br>Coupure d'électricité, plus d'Internet. Et Dave n'avait pas sauvegardé son travail...<Br><Br>Cette option augmente les 4 derniers langages d'1 niveau !</span></button></td>
+						<td><button class="tooltip" id="OptionPonc4" type="button">30000<span class="tooltiptext">Les formateurs débarquent dans le bureau de Dave pour lui donner plein de nouveaux TP sur des technologies qu'il ne connait pas ! Dave se met en PLS... <Br><Br>Une carte mystère aléatoire va se lancer.</span></button></td>
 					</tr>
 				</table>
 
@@ -170,12 +172,13 @@
 
 <!-- -------------------- SCRIPTS -------------------- -->
 
-<script src="./js/dave.js"></script>
 <script type="text/javascript" src="./js/CartesMyst.js"></script>
+<script src="./js/dave.js"></script>
 <script src="./js/mouseover.js"></script>
 <script src="./js/animationLarme.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script src="./js/cookie.js"></script>
+<script src="./js/sauvegarde.js"></script>
 
 
 </body>
@@ -183,7 +186,7 @@
 <!-- -------------------- FOOTER -------------------- -->
 
 <footer>
-	<p> Fais pleurer ton Dave, tous droits réservés. Un jeu réalisé par : <a href="https://benoitd34.github.io/" target="blank">Benoît</a>, <a href="https://mathilde-garin.github.io/images/cv-mathilde-garin-developpeuse-front.pdf" target="blank">Mathilde</a> & <a href="https://sixla.github.io/CvSixtineLanord.pdf" target="blank">Sixtine</a> © 2019</p>
+	<p> Fais pleurer ton Dave, tous droits réservés. Un jeu réalisé par : <a href="https://www.linkedin.com/in/benoit-dugovic/" target="blank">Benoît</a>, <a href="https://www.linkedin.com/in/mathildegarin/" target="blank">Mathilde</a> & <a href="https://www.linkedin.com/in/sixtine-lanord/" target="blank">Sixtine</a> © 2019</p>
 	<div>
 		<a href="https://benoitd34.github.io/" target="blank"><img src="images/logo-benoit.png"></a>
 		<a href="https://mathilde-garin.github.io" target="blank"><img src="images/logo-mathilde.png"></a>

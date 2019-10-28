@@ -69,6 +69,9 @@ var NextAchatOptionPonc2 = 50000; // Prix de départ de l'OptionPonc2
 $AfficheOptionPonc3 = document.getElementById("OptionPonc3"); // Maj bouton OptionPonc3
 var NextAchatOptionPonc3 = 25000000; // Prix de départ de l'OptionPonc3
 
+// VARIABLES OPTIONPONC4 : LANCE CARTE MYST
+$AfficheOptionPonc4 = document.getElementById("OptionPonc4"); // Maj bouton OptionPonc4
+var NextAchatOptionPonc4 = 30000; // Prix de départ de l'OptionPonc4
 
 
 ///////////////////////////// AJOUT LARMES AVEC CLICKER CANARD /////////////////////////////
@@ -449,3 +452,22 @@ var NextAchatOptionPonc3 = 25000000; // Prix de départ de l'OptionPonc3
 	}
 
 	$AfficheOptionPonc3.onclick = lancerOptionPonc3;
+
+
+/////////////////////////// OPTION PONCTUELLE 4 ////////////////////////////
+
+	function lancerOptionPonc4() {
+		if ((VCompteurLarmes - NextAchatOptionPonc4) >= 0) {
+			VCompteurLarmes = VCompteurLarmes - NextAchatOptionPonc4;
+			$AfficheCompteurLarmes.innerHTML = Math.trunc(VCompteurLarmes);
+
+			NextAchatOptionPonc4 = NextAchatOptionPonc4 * 2;
+			$AfficheOptionPonc4.innerHTML = NextAchatOptionPonc4;
+			EventRandom();
+		}
+		else {
+			alert("Gagnez plus de larmes pour pouvoir acheter l'option");
+		}
+	}
+
+	$AfficheOptionPonc4.onclick = lancerOptionPonc4;
