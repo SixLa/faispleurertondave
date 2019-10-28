@@ -9,6 +9,7 @@ var VModalCarteMyst4 = document.getElementById("ModalCarteMyst4");
 var VModalCarteMyst5 = document.getElementById("ModalCarteMyst5");
 var VModalCarteMyst6 = document.getElementById("ModalCarteMyst6");
 
+
 // Les modales pour les cartes mystères
 
 // Modale 1
@@ -100,3 +101,6 @@ function LancmtEvent() {
 	VChanceDeLancmt = Math.floor(Math.random() * 101);
 	if (VChanceDeLancmt<2) {EventRandom()} 
 }
+
+
+

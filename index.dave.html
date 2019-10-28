@@ -43,6 +43,8 @@
 
 			<div id="AllOptionUp">
 
+				<button id="sauvegarde" onclick="sauvegarde()">Sauvegarde</button>
+				<button id="charger" onclick="reload()">Charger</button>
 				<h1>Des langages à upgrader</h1>
 
 				<table id="TableOptionUp">
@@ -54,13 +56,13 @@
 					</tr>
 					<tr id="Niveaux">
 						<td id="niveauUp1">1</td>
-						<td colspan="2"><button id="OptionUp1">20</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp1">20<span class="tooltiptext">Augmente le nombre de larmes récolté à chaque clic</span></button></td>
 						<td id="niveauUp2">1</td>
-						<td colspan="2"><button id="OptionUp2" disabled="true"> 50</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp2" disabled="true"> 50<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp3">1</td>
-						<td colspan="2"><button id="OptionUp3" disabled="true"> 100</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp3" disabled="true"> 100<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp4">1</td>
-						<td colspan="2"><button id="OptionUp4" disabled="true"> 500</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp4" disabled="true"> 500<span class="tooltiptext">Augmente le nombre de larmes récolté à chaque clic</span></button></td>
 					</tr>
 					<tr id="ligneVide"><td></td></tr>
 					<tr id="Visuels">
@@ -71,13 +73,13 @@
 					</tr>
 					<tr id="Niveaux">
 						<td id="niveauUp5">1</td>
-						<td colspan="2"><button id="OptionUp5" disabled="true"> 1000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp5" disabled="true"> 1000<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp6">1</td>
-						<td colspan="2"><button id="OptionUp6" disabled="true"> 5000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp6" disabled="true"> 5000<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 						<td id="niveauUp7">1</td>
-						<td colspan="2"><button id="OptionUp7" disabled="true"> 25000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp7" disabled="true"> 25000<span class="tooltiptext">Augmente le nombre de larmes récolté à chaque clic</span></button></td>
 						<td id="niveauUp8">1</td>
-						<td colspan="2"><button id="OptionUp8" disabled="true"> 50000</button></td>
+						<td colspan="2"><button class="tooltip" id="OptionUp8" disabled="true"> 50000<span class="tooltiptext">Récolte automatiquement des larmes chaque seconde</span></button></td>
 					</tr>
 					<tr id="ligneVide"><td></td></tr>
 				</table>
@@ -92,16 +94,16 @@
 
 				<table id="TableOptionsPonc">
 					<tr id="Visuels">
-						<td id="TablePonc1"><img id="visuelUp" src="images/OptionUp1.png"></td>
-						<td id="TablePonc2"><img id="visuelUp" src="images/OptionUp1.png"></td>
-						<td id="TablePonc3"><img id="visuelUp" src="images/OptionUp1.png"></td>
-						<td id="TablePonc4"><img id="visuelUp" src="images/OptionUp1.png"></td>
+						<td id="TablePonc1"><img id="visuelUp" src="images/OptionPonc1.png"></td>
+						<td id="TablePonc2"><img id="visuelUp" src="images/OptionPonc2.png"></td>
+						<td id="TablePonc3"><img id="visuelUp" src="images/OptionPonc3.png"></td>
+						<td id="TablePonc4"><img id="visuelUp" src="images/OptionPonc4.png"></td>
 					</tr>
 					<tr id="NiveauxPonc">
-						<td><button id="OptionPonc1" type="button" disabled="true"><img src="images/larme.png"> 25000</button></td>
-						<td><button id="OptionPonc2" type="button" disabled="true"><img src="images/larme.png"> 50000</button></td>
-						<td><button id="OptionPonc3" type="button" disabled="true"><img src="images/larme.png"> 25000000</button></td>
-						<td><button id="OptionPonc4" type="button"><img src="images/larme.png"> 30000</button></td>
+						<td><button class="tooltip" id="OptionPonc1" type="button" disabled="true">25000<span class="tooltiptext">Oh non la machine à café est en panne ! Comment Dave va-t-il tenir toute la journée ?... <Br><Br>Achetez cette option et augmentez ainsi les 4 premiers langages d'1 niveau !</span></button></td>
+						<td><button class="tooltip" id="OptionPonc2" type="button" disabled="true">50000<span class="tooltiptext">L'ami développeur de Dave n'a vraiment rien compris, il n'arrête pas de déranger Dave dans son travail. <Br><Br>Débloquez cette option surprise !</span></button></td>
+						<td><button class="tooltip" id="OptionPonc3" type="button" disabled="true">25000000<span class="tooltiptext">... Ô désespoir !<Br><Br>Coupure d'électricité, plus d'Internet. Et Dave n'avait pas sauvegardé son travail...<Br><Br>Cette option augmente les 4 derniers langages d'1 niveau !</span></button></td>
+						<td><button class="tooltip" id="OptionPonc4" type="button">30000<span class="tooltiptext">Les formateurs débarquent dans le bureau de Dave pour lui donner plein de nouveaux TP sur des technologies qu'il ne connait pas ! Dave se met en PLS... <Br><Br>Une carte mystère aléatoire va se lancer.</span></button></td>
 					</tr>
 				</table>
 
@@ -116,86 +118,75 @@
 	<!-- Modal Carte Mystère 1 -->
 	<div id="ModalCarteMyst1" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Hello Kitty</B> <Br><Br> Dave est obnubilé devant une vidéo de chatons vraiment troooooop mignons ! <Br><Br> Vous perdez 25% de vos larmes car la chaleur apparue dans son coeur à leur vue les assèche.</h2>
+			<img id="imgModal" src="images/chatons.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 2 -->
 	<div id="ModalCarteMyst2" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h2><B>Une belle personne</B><Br><Br> Dave est beaucoup trop captivé par le "Top des 100 plus belles personnes de l'univers" pour penser à pleurer.<Br><Br> Dommage pour ces 50% de larmes que vous perdez...</h2>
+			<span class="close"></span>
+			<h2><B>Alerte à Malibu</B><Br><Br> Dave est beaucoup trop captivé par sa série préférée pour penser à pleurer.<Br><Br> Dommage pour ces 50% de larmes que vous perdez...</h2>
+			<img id="imgModal" src="images/baywatch.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 3 -->
 	<div id="ModalCarteMyst3" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Légalisez les cookies (de Mamie)</B> <Br><Br> Dave a reçu un colis avec les délicieux cookies cuisinés par sa Mamie. Ils sont tellement bons qu'il n'a plus envie de pleurer. <Br><Br>Vous perdez 75% de vos larmes actuelles.</h2>
+			<img id="imgModal" src="images/cookie-mamie.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 4 -->
 	<div id="ModalCarteMyst4" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Chouette, une mise à jour !</B> <Br><Br> L'ordinateur de Dave a une mise à jour à faire. <Br><Br>UNE TRES GROSSE MISE A JOUR qui vous engendre 25% de larmes supplémentaires...</h2>
+			<img id="imgModal" src="images/maj.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 5 -->
 	<div id="ModalCarteMyst5" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h2><B>Happy Birthday Mr Dave !</B> <Br><Br> C'est l'anniversaire de Dave ! Quel dommage qu'il soit seul avec sa bouteille de champagne. <Br><Br>Il est tellement triste que vous gagnez 50% de larmes supplémentaires ! </h2>
+			<span class="close"></span>
+			<h2><B>Happy Birthday Mr Dave !</B> <Br><Br> C'est l'anniversaire de Dave ! Quel dommage qu'il soit seul avec sa part de gâteau. <Br><Br>Il est tellement triste que vous gagnez 50% de larmes supplémentaires ! </h2>
+			<img id="imgModal" src="images/anniversaire.jpg">
 		</div>
 	</div>
 
 	<!-- Modal Carte Mystère 6 -->
 	<div id="ModalCarteMyst6" class="modal">
 		<div class="modal-content">
-			<span class="close">&times;</span>
+			<span class="close"></span>
 			<h2><B>Hot Stuff</B> <Br><Br> Larmes + prise de courant = incendie. OUPS Dave n'a plus Internet, il est au bout de sa vie. <Br><Br> Vous gagnez 75% de larmes supplémentaires !</h2>
+			<img id="imgModal" src="images/fire.jpg">
 		</div>
 	</div>
 
 
 <!-- -------------------- SCRIPTS -------------------- -->
 
-<script src="./js/dave.js"></script>
 <script type="text/javascript" src="./js/CartesMyst.js"></script>
+<script src="./js/dave.js"></script>
 <script src="./js/mouseover.js"></script>
-<script src="js/animationLarme.js"></script>
-
+<script src="./js/animationLarme.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#cf7848",
-      "text": "#000000"
-    },
-    "button": {
-      "background": "transparent",
-      "text": "#000000",
-      "border": "#000000"
-    }
-  },
-  "content": {
-    "message": "\nCe site utilise des cookies afin de vous proposer une expérience d'une immersion totale dans le monde des développeurs.\nAcceptez-les, vous ne le regretterez pas !",
-    "dismiss": "Les cookies, c'est trop bon !",
-    "link": "En savoir plus."
-  }
-});
-</script>
+<script src="./js/cookie.js"></script>
+<script src="./js/sauvegarde.js"></script>
+
+
 </body>
 
 <!-- -------------------- FOOTER -------------------- -->
 
 <footer>
-	<p> Fais pleurer ton Dave, tous droits réservés. Un jeu réalisé par : <a href="https://benoitd34.github.io/" target="blank">Benoît</a>, <a href="https://mathilde-garin.github.io/images/cv-mathilde-garin-developpeuse-front.pdf" target="blank">Mathilde</a> & <a href="https://sixla.github.io/CvSixtineLanord.pdf" target="blank">Sixtine</a> © 2019</p>
+	<p> Fais pleurer ton Dave, tous droits réservés. Un jeu réalisé par : <a href="https://www.linkedin.com/in/benoit-dugovic/" target="blank">Benoît</a>, <a href="https://www.linkedin.com/in/mathildegarin/" target="blank">Mathilde</a> & <a href="https://www.linkedin.com/in/sixtine-lanord/" target="blank">Sixtine</a> © 2019</p>
 	<div>
 		<a href="https://benoitd34.github.io/" target="blank"><img src="images/logo-benoit.png"></a>
 		<a href="https://mathilde-garin.github.io" target="blank"><img src="images/logo-mathilde.png"></a>
